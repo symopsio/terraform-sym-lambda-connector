@@ -1,3 +1,14 @@
+# Deprecation Warning
+The `symopsio/lambda-connector/sym` module is deprecated as of September 30, 2022. Please migrate to `symopsio/lambda-connector/aws`. This can be done in your module declarations by replacing the `symopsio/lambda-connector/sym` source argument with `symopsio/lambda-connector/aws`.
+
+```
+module "lambda_connector" {
+  source  = "symopsio/lambda-connector/aws"
+  version = "1.0.0"
+  # insert the 3 required variables here
+}
+```
+
 # lambda-connector
 
 The `lambda-connector` module provisions a Lambda role that the [AWS Lambda Strategy](https://docs.symops.com/docs/aws-lambda) can use to invoke AWS Lambda Functions.
